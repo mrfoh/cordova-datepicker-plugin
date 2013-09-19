@@ -31,7 +31,7 @@ var DatePicker = (function (gap) {
 		}
 		this._callback = cb;
 
-		return gap.exec(cb, failureCallback, 'DatePickerPlugin', defaults.mode, new Array(defaults));
+		return gap.exec(cb, failureCallback, 'Datepicker', defaults.mode, new Array(defaults));
 	};
 
 	DatePicker.prototype._dateSelected = function(date) {

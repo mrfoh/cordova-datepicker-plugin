@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.apache.cordova.plugin;
+package org.apache.cordova.datepicker;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -19,8 +19,8 @@ import android.util.Log;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
 
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 
 /**
  * @author ng4e
@@ -29,15 +29,15 @@ import org.apache.cordova.api.CordovaPlugin;
  *         Rewrote plugin so it it similar to the iOS datepicker plugin and it
  *         accepts prefilled dates and time
  */
-public class DatePickerPlugin extends CordovaPlugin {
+public class Datepicker extends CordovaPlugin {
 
 	private static final String ACTION_DATE = "date";
 	private static final String ACTION_TIME = "time";
-	private final String pluginName = "DatePickerPlugin";
+	private final String pluginName = "Datepicker";
 
     @Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
-		Log.d(pluginName, "DatePicker called with options: " + args);
+		Log.d(pluginName, "Datepicker called with options: " + args);
 
 		return this.show(args, callbackContext);
 	}
