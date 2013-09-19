@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.apache.cordova.plugin.datepicker"
+    version="1.0.0">
+
+    <name>Datepicker</name>
+    <description>Cordova Datepicker Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,datepicker</keywords>
+    <author>Patrick Foh</author>
+
+    <js-module src="www/dataPickerPlugin.js" name="datePicker">
+        <clobbers target="window.plugins.datePicker" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Contacts">
+                <param name="android-package" value="org.apache.cordova.plugin.datepicker"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/DatePickerPlugin.java" target-dir="src/org/apache/cordova/plugin/datepicker" />
+    </platform>
+</plugin>
