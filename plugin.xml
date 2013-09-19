@@ -12,7 +12,7 @@
     <keywords>cordova,datepicker</keywords>
     <author>Patrick Foh</author>
 
-    <js-module src="www/datepicker.js" name="datePicker">
+    <js-module src="www/datepicker.js" name="Datepicker">
         <clobbers target="window.plugins.datePicker" />
     </js-module>
 
