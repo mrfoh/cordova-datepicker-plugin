@@ -98,6 +98,13 @@ public class Datepicker extends CordovaPlugin {
 					final DateSetListener dateSetListener = new DateSetListener(datePickerPlugin, callbackContext);
 					final DatePickerDialog dateDialog = new DatePickerDialog(currentCtx, dateSetListener, mYear,
 							mMonth, mDay);
+					//Trying this
+					dateDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() 
+					{
+					    public void onClick(DialogInterface dialog, int which) 
+					{
+					    if (which == DialogInterface.BUTTON_NEGATIVE) {
+					    datePickerPlugin.success(new PluginResult(PluginResult.Status.NO_RESULT, ""), callBackId);}}});
 					dateDialog.show();
 				}
 			};
