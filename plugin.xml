@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="org.apache.cordova.datepicker"
+    id="org.apache.cordova.plugin.datepicker"
     version="1.0.0">
 
     <name>Datepicker</name>
@@ -20,7 +20,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Datepicker">
-                <param name="android-package" value="org.apache.cordova.datepicker"/>
+                <param name="android-package" value="org.apache.cordova.datepicker.Datepicker"/>
             </feature>
         </config-file>
 
