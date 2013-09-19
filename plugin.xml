@@ -19,7 +19,7 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Contacts">
+            <feature name="Datepicker">
                 <param name="android-package" value="org.apache.cordova.plugin.datepicker"/>
             </feature>
         </config-file>
